@@ -1,8 +1,8 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import Composer from './src/Composer.ts'
+import MObjectComposer, { MObject } from './src/MObjectComposer.ts'
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
+export type MOriginValue = MObject
+
+export function mononobe(origin: MOriginValue): Composer {
+  return new MObjectComposer(origin)
 }
