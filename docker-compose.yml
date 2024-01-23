@@ -1,0 +1,9 @@
+version: '3'
+services:
+  mononobe:
+    image: denoland/deno:1.38.2
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./:/mononobe
+    working_dir: /mononobe
